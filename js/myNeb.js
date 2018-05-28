@@ -66,6 +66,7 @@ function getAllDate(limit,offset){
 		var person=new Object();
 		person.nickname="Bill";
 		person.content="好心塞，我也是贫困地区出来的，看到这些很难受，尽点绵薄之力吧";
+		person.author="n1X4YNgEgYrnUEpSTnxc9rGv7HH99vw24cW";
 		person.value=100;
 		arr.push(person);
 		
@@ -73,6 +74,7 @@ function getAllDate(limit,offset){
 		person1.nickname="Gates";
 		person1.content="唉，钱不多，能帮一点是一点吧。";
 		person1.value=20;
+		person1.author="n1Rvrsz9efbVz62LDz6Ven2F4kVSqXNbC2g";
 		arr.push(person1);
 		
 		//排序
@@ -119,6 +121,12 @@ function getAllDate(limit,offset){
 			
 			var b =  document.createElement('br');
 			p.appendChild(b);
+			
+			var addressText = document.createTextNode(arr[i].author);
+			p.appendChild(addressText);
+			
+			var b2 =  document.createElement('br');
+			p.appendChild(b2);
 			
 			var ptxt = document.createTextNode(arr[i].content);
 			p.appendChild(ptxt);
